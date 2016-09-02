@@ -1,0 +1,365 @@
+@import "mixin"
+@import "bourbon/bourbon"
+
+
+body
+    height: 2000px
+    position: relative
+    line-height: 1.6
+    -webkit-font-smoothing: antialiased
+    overflow-x: hidden
+    &::before,
+    &::after 
+        @include pseudo
+        top: 0
+        bottom: 0
+        width: 50%
+        z-index: -1
+    &::before
+        background-color: #03080C
+        left: 0
+    &::after
+        background-color: #010605
+        right: 0
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: red
+body input:required:valid,
+body textarea:required:valid
+    color: green
+
+*
+    box-sizing: border-box
+
+.wrapper
+    max-width: 1459px
+    min-width: 960px
+    height: 100%
+    margin: 0 auto
+    background: url("../img/background1459x1667.png") top  
+    background-color:  #03080C
+    background-size: auto
+    box-shadow: inset 20px 0 20px #03080C, inset -20px 0 20px  #010605
+    overflow: hidden
+
+.clearfix::after
+    content: ""
+    clear: both
+    display: table  
+
+.hidden
+    display: none
+
+.main-header
+    @include size(1143px 202px)
+    position: relative
+    margin: 0 auto 20px
+    border-radius: 8px
+    overflow:hidden 
+    background: url("../img/headerO3.png") no-repeat
+    background-size: auto
+    
+    &::before,
+    &::after
+        @include size(140px 154px)
+        @include pseudo
+        top: 0px
+        
+    &::before
+        background: url("../img/handL.png")
+        left: -115px
+    &:after
+        background: url("../img/handR.png")
+        right: -115px
+    &_name
+        @include size(100% 70px)
+        @include text-truncate
+        position: absolute
+        top: 88px
+        z-index: 2
+        left: 0
+        text-align: center
+        font: normal 70px/70px "Cyfra"
+        letter-spacing: 6px
+        // color: #49547C
+        color: #2297d6
+        text-shadow: 0px 0px 5px $shadow
+    &_avatar
+        position: absolute
+        width: 160px
+        height: 178px
+        top: 30px
+        left: 50px
+        z-index: 3
+        img
+            width: 100%
+            height: auto
+
+.main-page
+    position: relative
+    width: 1149px
+    // max-height: 1400px
+    margin: 0 auto
+    
+    border-radius: 10px
+    border: 3px solid rgba(0,0,0,.7)
+    box-shadow: 0 4px 10px rgba(0,0,0,.5), inset 0 10px 30px rgba(255,255,255,.8),inset 0 -15px 30px rgba(0,0,0,.3)
+    overflow:hidden
+    z-index: 5
+    &_blur
+        @include size(100%)
+        position: absolute
+        top: 0px
+        left: 0px
+        z-index: -1
+        border-radius: 10px
+        background: url("../img/background1459x1667.png") -156px -225px no-repeat
+        background-size: auto
+        filter: blur(5px)
+    &_content
+        // position: absolute
+        @include size(100%)
+        @include clearfix
+        padding: 10px
+        // background: rgba(255,255,255,.02)
+       
+.content
+    &-left
+        width: 300px
+        float: left
+        overflow: hidden
+        border-radius: 0 0 0 4px
+        .content_title
+            border-radius: 4px 0 0 0          
+            
+    &-right
+        width: 823px
+        float: left
+        height: 100%
+        border-radius: 0 0 4px 0
+        box-shadow: inset 0px 0 16px 0 rgba(0, 0, 0, .6)
+        .content_title
+            border-radius: 0 4px  0 0       
+    &_title
+        margin: 0
+        // padding: 12px 0px
+        text-transform: uppercase
+        text-align: center
+        font: normal 22px/48px "Bicubik", sans-serif
+        letter-spacing: 3px
+        color: #C9C9C9
+        text-shadow: 1px -1px 1px rgba(201, 201, 201, .2)
+        background-color: rgba(255,111,0,.4)
+        box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .6), inset 0 -1px 0 0 $border-color
+
+
+
+// accordion    
+.active_header
+    background-color: rgba(30, 42, 88, 0.6)
+.inactive_header
+    background-color: rgba(30, 42, 88, 0.6)
+    &:hover 
+        background-color: rgba(2, 11, 47, 0.4)
+
+.accordion
+    &_content
+        @include size(300px auto)
+        display: none
+        background-color: rgba(13, 19, 35, 0.3)
+        padding: 17px 17px 10px
+        &:last-child
+            margin-bottom: 30px
+    &_header
+        width: 300px
+        margin: 0
+        padding: 0px 10px 0px 20px
+        text-transform: uppercase
+        text-align: left
+        font: normal 15px/45px "Bicubik"
+        color: #ba753f
+        letter-spacing: 2px
+        text-shadow: 1px -1px 1px rgba(236, 236, 236, .2)
+        box-shadow:  inset 0 0 10px  rgba(0, 0, 0, .7)
+        cursor: pointer
+        // background-color: rgba(30, 42, 88, 0.6)
+        background-color: rgba(13, 26, 75, 0.59)    
+        
+    .acc-text
+        font: 15px/23px "FiraSansBook"  
+        color: gray
+        margin: 0px 0px 10px 0px
+        a 
+            color: rgba(255,111,0,.4)
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+// ******
+.content-left
+    .certificates
+        display: flex
+        justify-content: space-between
+        flex-direction: row
+        flex-wrap: wrap
+        &_item
+            @include size(80px 110px)
+            display: block
+            img
+                @include size(100% auto)        
+    .skills
+        display: flex
+        justify-content: space-between
+        flex-direction: row
+        flex-wrap: wrap
+        span
+            padding: 2px 10px 0
+            margin: 0 5px 10px 0
+            font: 17px/30px "FiraSansBook"
+            border-radius: 15px
+            &.active
+                color: #2b8040
+                border: 3px solid #1e662f
+            &.non-active    
+                color: #29323d
+                border: 3px solid #29323d 
+    .links
+        font-size: 0
+        [class*="link-"]
+            @include size(50px)
+            @include inline-top
+            margin: 0 10px 10px 0
+            opacity: 0.5
+            transition: all 0.2s ease-in-out
+            &:hover
+                opacity: 0.7    
+ 
+    .contacts
+        a[class*="link-"]
+            position: relative
+            display: block
+            padding-left: 40px
+            margin: 0 0 20px 10px
+            color: gray
+            font: 17px/30px "FiraSansBook"
+            text-decoration: none
+            cursor: pointer
+            transition: all 0.2s ease-in-out
+            &:last-child
+                margin-bottom: 10px
+            &:hover
+                transform: scale(1.1) translateX(10px)
+            &::before
+                @include pseudo
+                @include size(30px)
+                left: 0px
+                top: 0
+                opacity: 0.4
+
+.portfolio
+    width: 100%
+    display: flex
+    flex-direction: column
+    box-shadow: -1px 0 0 $border-color
+    padding: 30px 20px 0
+
+    &_row
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-wrap: wrap
+        margin-bottom: 20px
+    &-item
+        @include size(200px 250px)
+        outline: 1px solid white
+
+
+
+// magnific-popup
+.mfp-ready .mfp-figure
+    opacity: 0
+.mfp-zoom-in
+    .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+        opacity: 0
+        transition: all 0.3s ease-out
+        transform: scale(0.95)
+    &.mfp-bg, .mfp-preloader
+        opacity: 0
+        transition: all 0.3s ease-out
+    &.mfp-image-loaded .mfp-figure
+        opacity: 1
+        transform: scale(1)
+    &.mfp-ready
+        .mfp-iframe-holder .mfp-iframe-scaler
+            opacity: 1
+            transform: scale(1)
+        &.mfp-bg, .mfp-preloader
+            opacity: 0.8
+    &.mfp-removing
+        .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+            transform: scale(0.95)
+            opacity: 0
+        &.mfp-bg, .mfp-preloader
+            opacity: 0
+
+.mfp-iframe-scaler
+    overflow: visible
+.mfp-zoom-out-cur
+    cursor: auto
+    .mfp-image-holder .mfp-close
+        cursor: pointer
+.mfp-preloader
+    width: 30px
+    height: 30px
+    background-color: #FFF
+    opacity: 0.65
+    margin: 0 auto
+    animation: rotateplane 1.2s infinite ease-in-out
+@-webkit-keyframes rotateplane
+    0%
+        -webkit-transform: perspective(120px)
+    50%
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    100%
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+@keyframes rotateplane
+    0%
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    50%
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    100%
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+
+
+    
+
+
+//  -moz-border-radius: 5px 5px 0 0
+//  -webkit-border-radius: 5px 5px 0 0
+//  border-radius: 5px 5px 0 0
+//  background: url(images/active-header.gif) #cef98d
+//  background-repeat: no-repeat
+//  background-position: right 50%
+
+
+// .active-header:hover 
+//  background: url(images/active-header.gif) #c6f089
+//  background-repeat: no-repeat
+//  background-position: right 50%
+
+
+// .inactive-header 
+//  background: url(images/inactive-header.gif) #ebebeb
+//  background-repeat: no-repeat
+//  background-position: right 50%
+
+
+
+    
+
+
+
+// inset 0 3px rgba(255,255,255,.5), inset 0 8px rgba(255,255,255,.4),
+ // inset 0 -1px 0 0 $border-color

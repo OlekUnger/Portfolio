@@ -1,0 +1,90 @@
+$white-color: #fff
+
+$shadow: lighten(#2297d6, 10%)
+
+// $border-color: rgba(94, 85, 7, 1)
+$border-color: rgba(255,255,255,.2)
+$violet-color: rgba(85, 104, 186, .4)
+// $dark-violet-color: rgba(35, 54, 135, 0.5)
+// $dark-violet-color: rgba(52,32,150,.5)
+$dark-violet-color: rgba(30, 42, 88, 0.8)
+@mixin clearfix
+  	&::after
+    	clear: both
+    	content: ""
+    	display: table
+
+@mixin inline-top
+	display: inline-block
+	vertical-align: top
+
+
+@mixin inline-middle
+  display: inline-block
+  vertical-align: middle
+
+
+@mixin inline-bottom
+  display: inline-block
+  vertical-align: bottom
+
+
+
+
+
+
+@mixin font-bold($font-size, $line-height)
+    font-weight: 700
+    font-family: $font-family
+    font-size: $font-size
+    line-height: $line-height
+
+
+@mixin font-normal($font-size, $line-height)
+    font-weight: 400
+    font-family: $font-family
+    font-size: $font-size
+    line-height: $line-height
+    // @include font-normal(20px,25px)
+
+@mixin opacity($opacity)
+	opacity: $opacity
+	$opacity-ie: $opacity*100
+	filter: alpha(opacity=$opacity-ie) //IE8
+// @include opacity(.8)
+
+@mixin text-truncate
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: no-wrap
+// @include text-truncate	
+	
+@mixin pseudo($display: block, $pos: absolute, $content:"")
+	content: $content
+	display: $display
+	position: $pos
+
+@for $i from 0 to 4
+	$step: -35px
+	.contacts .link-#{$i+1}::before
+		background: url("../img/sprites/sprite.png") no-repeat ($step*$i) 0
+		// &:hover
+		// 	background: url("../sprites/sprite.png") no-repeat ($step*$i) 0
+
+@for $i from 0 to 4
+  $step: -55px
+  .links .link-#{$i+1}
+    background: url("../img/sprites/sprite1.png") no-repeat ($step*$i) 0    
+
+// @for $i from 1 to 6
+// 	$step: -45px
+// 	.link-#{$i}::before
+// 		background: url("../sprites/sprite4.png") no-repeat (45px+$step*$i) 0
+					
+
+
+// @for $i from 1 through 6
+//   .link-#{$i}
+//     background-image: url("../sprites/sprite2.png/ico-#{$i}.png")
+
+

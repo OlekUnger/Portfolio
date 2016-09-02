@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "FiraSansBook";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansBook/firasans-book.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansBook/firasans-book.woff") format("woff"), url("../fonts/FiraSansBook/firasans-book.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansLight/firasans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansLight/firasans-light.woff") format("woff"), url("../fonts/FiraSansLight/firasans-light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansLightItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansLightItalic/firasans-lightitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansLightItalic/firasans-lightitalic.woff") format("woff"), url("../fonts/FiraSansLightItalic/firasans-lightitalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FiraSansMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FiraSansMedium/firasans-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSansMedium/firasans-medium.woff") format("woff"), url("../fonts/FiraSansMedium/firasans-medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Cyfra";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Cyfra/Cyfra.eot?#iefix") format("embedded-opentype"), url("../fonts/Cyfra/Cyfra.woff") format("woff"), url("../fonts/Cyfra/Cyfra.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bicubik";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BicubikRegular/BicubikRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BicubikRegular/BicubikRegular.woff") format("woff"), url("../fonts/BicubikRegular/BicubikRegular.ttf") format("truetype"); }
