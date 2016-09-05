@@ -757,8 +757,7 @@ textarea {
   vertical-align: middle;
   position: relative;
   overflow: hidden;
-  min-width: 320px;
-  height: 96%; }
+  height: 94%; }
 
 /**************************************/
 .baron .baron__track {
@@ -795,11 +794,6 @@ textarea {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   opacity: .5; }
-
-.baron {
-  position: relative;
-  overflow: hidden;
-  height: 96%; }
 
 .baron__scroller {
   overflow-y: scroll;

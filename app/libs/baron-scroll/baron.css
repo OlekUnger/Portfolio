@@ -1,8 +1,4 @@
-.baron {
-    position: relative;
-    overflow: hidden;
-    height: 96%;
-}
+
 .baron__scroller {
     overflow-y: scroll;
     -ms-overflow-style: none;
