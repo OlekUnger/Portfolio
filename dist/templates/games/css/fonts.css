@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "ImpactRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ImpactRegular/ImpactRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ImpactRegular/ImpactRegular.woff") format("woff"), url("../fonts/ImpactRegular/ImpactRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "ArialRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "PFDinRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDin/PFDinDisplay.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDin/PFDinDisplay.woff") format("woff"), url("../fonts/PFDin/PFDinDisplay.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "RobotoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "PFDinConRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinConRegular/PFDinCondensedRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinConRegular/PFDinCondensedRegular.woff") format("woff"), url("../fonts/PFDinConRegular/PFDinCondensedRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "PFDinMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinMedium/PFDinMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinMedium/PFDinMedium.woff") format("woff"), url("../fonts/PFDinMedium/PFDinMedium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "TahomaRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinMedium/PFDinMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinMedium/PFDinMedium.woff") format("woff"), url("../fonts/PFDinMedium/PFDinMedium.ttf") format("truetype"); }
